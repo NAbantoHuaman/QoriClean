@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 import { LeafNaturalIcon, WaterDropIcon, RecycleZeroIcon, PeruMapIcon, LlamaIcon } from './BrandIcons'
 
 const benefits = [
@@ -28,14 +29,14 @@ const benefits = [
   },
 ]
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.12 }
   }
 }
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30, scale: 0.95 },
   visible: {
     opacity: 1, y: 0, scale: 1,

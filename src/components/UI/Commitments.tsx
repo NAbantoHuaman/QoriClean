@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 import { BunnyIcon, FlaskIcon, HeartIcon, LlamaIcon, GoldStamp } from './BrandIcons'
 import { Leaf, Recycle, Globe, Sparkles } from 'lucide-react'
 
@@ -39,12 +40,12 @@ const sustainabilityPoints = [
   },
 ]
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } },
 }
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 20, scale: 0.96 },
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
 }

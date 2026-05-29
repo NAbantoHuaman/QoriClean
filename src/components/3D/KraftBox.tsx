@@ -3,7 +3,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { useTexture } from '@react-three/drei'
 import * as THREE from 'three'
 
-const KraftBox = ({ position, visible, onClick }: { position: [number, number, number], visible: boolean, onClick: () => void }) => {
+const KraftBox = ({ visible, onClick }: { position?: [number, number, number], visible: boolean, onClick: () => void }) => {
   const meshRef = useRef<THREE.Mesh>(null)
   const [hovered, setHovered] = useState(false)
   const { pointer, gl } = useThree()
