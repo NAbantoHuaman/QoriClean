@@ -187,3 +187,43 @@ export const SpiralLeafIcon = ({ size = 28, className = '' }: { size?: number; c
     />
   </svg>
 )
+
+// ── BOTANICAL ICONS (Custom line art) ──
+export const TaraIcon = ({ size = 24, color = 'currentColor', className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M12 22V10M12 18c2-2 4-2 4-2s0 2-2 4M12 14c-2-2-4-2-4-2s0 2 2 4M12 10c2-2 4-2 4-2s0 2-2 4M12 6c-2-2-4-2-4-2s0 2 2 4" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="16" cy="14" r="1.5" fill={color} />
+    <circle cx="8" cy="10" r="1.5" fill={color} />
+    <circle cx="16" cy="6" r="1.5" fill={color} />
+  </svg>
+)
+
+export const MaticoIcon = ({ size = 24, color = 'currentColor', className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M12 22s-8-5.5-8-12c0-4 4-6 8-8 4 2 8 4 8 8 0 6.5-8 12-8 12z" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M12 22V6M12 10l3-2.5M12 14l-3.5-3M12 18l3.5-3" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const AloeIcon = ({ size = 24, color = 'currentColor', className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M12 22L12 4s3 5 4 18M12 22s-3-5-4-18" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M16 22l4-12s-2 3-4 12M8 22L4 10s2 3 4 12" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
+export const MacaIcon = ({ size = 24, color = 'currentColor', className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M12 22v-4" stroke={color} strokeWidth="1.5" strokeLinecap="round"/>
+    <path d="M8 10c0 4 2 8 4 8s4-4 4-8c0-3.5-2-6-4-6s-4 2.5-4 6z" stroke={color} strokeWidth="1.5"/>
+    <path d="M12 4V2M10 4s-1-2-3-2M14 4s1-2 3-2" stroke={color} strokeWidth="1.5" strokeLinecap="round"/>
+    <path d="M10 12h4M11 15h2" stroke={color} strokeWidth="1.5" strokeLinecap="round"/>
+  </svg>
+)
+
+export const SachaInchiIcon = ({ size = 24, color = 'currentColor', className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M12 2l2.5 7.5h8l-6.5 4.5 2.5 8-6.5-5-6.5 5 2.5-8-6.5-4.5h8L12 2z" stroke={color} strokeWidth="1.5" strokeLinejoin="round"/>
+    <circle cx="12" cy="13" r="2.5" stroke={color} strokeWidth="1.5" />
+  </svg>
+)

@@ -42,7 +42,7 @@ const Navbar = () => {
           <li key={link.label}>
             <a
               href={link.href}
-              className="text-[11px] tracking-[0.18em] font-semibold text-qori-dark/60 hover:text-qori-green transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-qori-green after:transition-all after:duration-300 hover:after:w-full"
+              className="text-[11px] tracking-[0.18em] font-semibold text-qori-dark/60 hover:text-qori-green focus-visible:outline-none focus-visible:text-qori-green transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1.5px] after:bg-qori-green after:transition-all after:duration-300 hover:after:w-full focus-visible:after:w-full"
             >
               {link.label}
             </a>
@@ -53,8 +53,8 @@ const Navbar = () => {
       {/* Right side */}
       <div className="flex items-center gap-4">
         <a
-          href="#tienda"
-          className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-qori-green text-white text-[11px] tracking-[0.12em] font-bold uppercase hover:bg-qori-green-light transition-all duration-300 shimmer-btn shadow-md shadow-qori-green/20"
+          href="#contacto"
+          className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-qori-green text-white text-[11px] tracking-[0.12em] font-bold uppercase hover:bg-qori-green-light transition-all duration-300 shimmer-btn shadow-md shadow-qori-green/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qori-green focus-visible:ring-offset-2 focus-visible:ring-offset-qori-beige"
         >
           <ShoppingBag size={14} strokeWidth={2} />
           Tienda
@@ -86,7 +86,7 @@ const Navbar = () => {
             ))}
             <li>
               <a
-                href="#tienda"
+                href="#contacto"
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-qori-green text-white text-sm tracking-[0.12em] font-bold uppercase shadow-md"
               >

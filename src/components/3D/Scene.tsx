@@ -24,7 +24,7 @@ const Scene = () => {
   return (
     <>
       <directionalLight position={[5, 8, 5]} intensity={1.2} color="#FFF5E6" castShadow />
-      <ambientLight intensity={0.35} color="#FFF8F0" />
+      <ambientLight intensity={0.4} color="#E8F0E8" />
       <directionalLight position={[-3, 2, -5]} intensity={0.6} color="#FFD090" />
       <BreathingLight />
 

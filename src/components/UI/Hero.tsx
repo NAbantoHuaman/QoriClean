@@ -1,10 +1,12 @@
 import { Canvas } from '@react-three/fiber'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import { ACESFilmicToneMapping } from 'three'
 import Scene from '../3D/Scene'
 import { LlamaHeroIcon, HechoEnPeruBadge, DecorativeLeaf, GoldStamp } from './BrandIcons'
 
 const Hero = () => {
+  const [hasInteracted, setHasInteracted] = useState(false)
+
   return (
     <section className="min-h-screen w-full flex flex-col items-center pt-24 md:pt-28 relative z-10 overflow-hidden">
       {/* ── Background ambient glows ── */}
@@ -21,8 +23,8 @@ const Hero = () => {
       </div>
 
       {/* ── Llama watermark ── */}
-      <div className="absolute left-6 md:left-16 bottom-[20%] opacity-[0.04] pointer-events-none animate-float-slow hidden lg:block">
-        <LlamaHeroIcon />
+      <div className="absolute left-[-20px] md:left-10 bottom-[15%] opacity-20 pointer-events-none animate-float-slow hidden lg:block">
+        <LlamaHeroIcon className="text-qori-orange" />
       </div>
 
       {/* ── Gold stamp right side ── */}
@@ -59,7 +61,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-10 animate-fade-in-up delay-400">
           <a
             href="#producto"
-            className="px-9 py-3.5 rounded-full bg-qori-green text-white text-sm font-bold tracking-widest uppercase hover:bg-qori-green-light transition-all duration-300 shimmer-btn shadow-lg shadow-qori-green/20 flex items-center gap-2"
+            className="px-9 py-3.5 rounded-full bg-qori-green text-white text-sm font-bold tracking-widest uppercase hover:bg-qori-green-light transition-all duration-300 shimmer-btn shadow-lg shadow-qori-green/20 flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qori-green focus-visible:ring-offset-2 focus-visible:ring-offset-qori-beige"
           >
             Descubre más
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -68,7 +70,7 @@ const Hero = () => {
           </a>
           <a
             href="#ingredientes"
-            className="flex items-center gap-2 px-8 py-3.5 rounded-full border-2 border-qori-orange/25 hover:border-qori-orange text-sm font-bold tracking-widest text-qori-orange uppercase group hover:bg-qori-orange/5 transition-all duration-300"
+            className="flex items-center gap-2 px-8 py-3.5 rounded-full border-2 border-qori-orange/25 hover:border-qori-orange text-sm font-bold tracking-widest text-qori-orange uppercase group hover:bg-qori-orange/5 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-qori-orange focus-visible:ring-offset-2 focus-visible:ring-offset-qori-beige"
           >
             Ingredientes
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" className="group-hover:translate-y-0.5 transition-transform">
@@ -89,7 +91,10 @@ const Hero = () => {
       </div>
 
       {/* ── 3D Canvas ── */}
-      <div className="w-full max-w-4xl mx-auto h-[420px] md:h-[580px] relative z-10 mt-0 cursor-grab active:cursor-grabbing animate-fade-in-scale delay-500">
+      <div 
+        className="w-full max-w-4xl mx-auto h-[420px] md:h-[580px] relative z-10 mt-0 cursor-grab active:cursor-grabbing animate-fade-in-scale delay-500"
+        onPointerDown={() => setHasInteracted(true)}
+      >
         <Canvas
           camera={{ position: [0, 0, 7], fov: 42 }}
           gl={{
@@ -106,7 +111,7 @@ const Hero = () => {
           </Suspense>
         </Canvas>
 
-        <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-[9px] text-qori-dark/25 tracking-[0.25em] uppercase pointer-events-none select-none font-semibold">
+        <p className={`absolute bottom-4 left-1/2 -translate-x-1/2 text-[9px] text-qori-dark/40 tracking-[0.25em] uppercase pointer-events-none select-none font-bold transition-opacity duration-700 ${hasInteracted ? 'opacity-0' : 'opacity-100'}`}>
           Click para abrir · Arrastra para girar
         </p>
       </div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { LeafNaturalIcon, WaterDropIcon, RecycleZeroIcon, PeruMapIcon, SpiralLogo } from './BrandIcons'
+import { LeafNaturalIcon, WaterDropIcon, RecycleZeroIcon, PeruMapIcon, LlamaIcon } from './BrandIcons'
 
 const benefits = [
   {
@@ -106,8 +106,10 @@ const ProductBenefits = () => {
           viewport={{ once: false }}
           transition={{ delay: 0.3, duration: 0.7 }}
         >
-          <div className="flex items-center gap-4">
-            <SpiralLogo size={32} color="#2D6B30" className="shrink-0" />
+          <div className="flex items-center gap-5">
+            <div className="w-16 h-16 rounded-full bg-qori-orange/10 flex items-center justify-center shrink-0">
+              <LlamaIcon size={42} color="#D4822A" />
+            </div>
             <div>
               <p className="text-sm md:text-base text-qori-dark font-medium">
                 Libre de parabenos, sulfatos y químicos agresivos.

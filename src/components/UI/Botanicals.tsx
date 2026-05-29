@@ -1,20 +1,21 @@
 import { motion } from 'framer-motion'
-import { LeafPlantIcon } from './BrandIcons'
+import type { Variants } from 'framer-motion'
+import { LeafPlantIcon, TaraIcon, MaticoIcon, AloeIcon, MacaIcon, SachaInchiIcon } from './BrandIcons'
 
 const botanicals = [
-  { name: 'Tara', desc: 'Poderoso antioxidante natural, conocido como el "oro verde" de los Incas.', icon: '🌿' },
-  { name: 'Matico', desc: 'Propiedades purificantes y cicatrizantes que limpian profundamente sin resecar.', icon: '🍃' },
-  { name: 'Aloe Vera', desc: 'Núcleo interno de gel hidratante que calma y refresca durante el uso.', icon: '💧' },
-  { name: 'Maca', desc: 'Revitaliza y aporta luminosidad, estimulando la regeneración celular.', icon: '⚡' },
-  { name: 'Sacha Inchi', desc: 'Rico en Omega 3, 6 y 9. Mantiene la barrera protectora de la piel.', icon: '🌰' },
+  { name: 'Tara', desc: 'Poderoso antioxidante natural, conocido como el "oro verde" de los Incas.', icon: <TaraIcon size={26} color="#2D6B30" /> },
+  { name: 'Matico', desc: 'Propiedades purificantes y cicatrizantes que limpian profundamente sin resecar.', icon: <MaticoIcon size={26} color="#2D6B30" /> },
+  { name: 'Aloe Vera', desc: 'Núcleo interno de gel hidratante que calma y refresca durante el uso.', icon: <AloeIcon size={26} color="#2D6B30" /> },
+  { name: 'Maca', desc: 'Revitaliza y aporta luminosidad, estimulando la regeneración celular.', icon: <MacaIcon size={26} color="#2D6B30" /> },
+  { name: 'Sacha Inchi', desc: 'Rico en Omega 3, 6 y 9. Mantiene la barrera protectora de la piel.', icon: <SachaInchiIcon size={26} color="#2D6B30" /> },
 ]
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.1 } }
 }
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
 }
